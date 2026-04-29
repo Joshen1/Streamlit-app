@@ -1,3 +1,7 @@
 import pandas as pd
+from sklearn.datasets import fetch_california_housing
 
-print(pd.__version__)
+def load_data():
+    data = fetch_california_housing(as_frame=True)
+    df = data.frame
+    return df
